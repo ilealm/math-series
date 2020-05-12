@@ -1,6 +1,6 @@
 from math_series import __version__
 
-from math_series.series import fibonacci, lucas
+from math_series.series import fibonacci, lucas, sum_series
 
 def test_version():
     assert __version__ == '0.1.0'
@@ -79,4 +79,28 @@ def test_lucas_six():
 def test_lucas_six():
     actual = lucas(2)
     expected = 3
+    assert actual == expected
+
+def tesst_sum_series_one():
+    # testing on fibonacci
+    actual = sum_series(12)
+    expected = 144
+    assert actual == expected
+
+def tesst_sum_series_two():
+    # testing on lucas
+    actual = sum_series(10,2,1)
+    expected = 123
+    assert actual == expected
+
+def tesst_sum_series_three():
+    # testing on custom sequence
+    actual = sum_series(5,1,5)
+    expected = 17
+    assert actual == expected
+
+def tesst_sum_series_four():
+    # testing on custom sequence
+    actual = sum_series(3,1,10)
+    expected = 21
     assert actual == expected
