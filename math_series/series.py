@@ -1,5 +1,7 @@
 def fibonacci(n):
     """Returns the integer value of n position in the fibonacci sequence."""
+    if n == 0 : return 0
+    if n == 1 : return 1
     left = 0
     right = 1
     i = 1
@@ -15,6 +17,8 @@ def fibonacci(n):
 
 def lucas(n):
     """Returns the integer value of n position in the lucas sequence."""
+    if n == 0 : return 2
+    if n == 1 : return 1
     left = 2
     right = 1
     i = 1

@@ -1,6 +1,5 @@
 from math_series import __version__
 
-# from math_series.series import fibonacci
 from math_series.series import fibonacci, lucas
 
 def test_version():
@@ -32,6 +31,21 @@ def test_fibo_four():
     expected = 377
     assert actual == expected
 
+def test_fibo_five():
+    actual = fibonacci(0)
+    expected = 0
+    assert actual == expected
+
+def test_fibo_six():
+    actual = fibonacci(1)
+    expected = 1
+    assert actual == expected
+
+def test_fibo_seven():
+    actual = fibonacci(2)
+    expected = 1
+    assert actual == expected
+
 def test_lucas_one():
     actual = lucas(4)
     expected = 7
@@ -50,4 +64,19 @@ def test_lucas_three():
 def test_lucas_four():
     actual = lucas(7)
     expected = 29
+    assert actual == expected
+
+def test_lucas_five():
+    actual = lucas(0)
+    expected = 2
+    assert actual == expected
+
+def test_lucas_six():
+    actual = lucas(1)
+    expected = 1
+    assert actual == expected
+
+def test_lucas_six():
+    actual = lucas(2)
+    expected = 3
     assert actual == expected
